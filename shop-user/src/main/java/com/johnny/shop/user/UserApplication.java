@@ -2,6 +2,7 @@ package com.johnny.shop.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * <b>请输入名称</b>
@@ -14,6 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author wan.liang(79274)
  * @date 2023/11/3 14:19
  */
+@EnableDiscoveryClient
 @SpringBootApplication
 public class UserApplication {
 
