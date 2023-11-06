@@ -1,5 +1,8 @@
 server:
   port: 8091
+  tomcat:
+    # tomcat的最大并发修改为10，默认是200
+    max-threads: 10
 spring:
   application:
     name: service-order
@@ -18,3 +21,12 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        # 跟控制台交流的端口，随意指定一个未使用的端口即可
+        port: 9999
+        # 指定控制台服务的地址
+        dashboard: localhost:8080
+service-product:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

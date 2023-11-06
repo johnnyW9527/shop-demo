@@ -27,6 +27,8 @@ import org.springframework.web.client.RestTemplate;
 public class OrderApplication {
 
     public static void main(String[] args) {
+        System.setProperty("csp.sentinel.dashboard.server","localhost:8080");
+        System.setProperty("csp.sentinel.app.name","service-order");
         SpringApplication.run(OrderApplication.class, args);
     }
 
